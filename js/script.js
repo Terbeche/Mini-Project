@@ -20,80 +20,80 @@ for (let i = 0; i < menuLinks.length; i += 1) {
   menuLinks[i].addEventListener('click', hideTheMenu);
 }
 
-const teachersDetails = [{
-  teacher_name: 'Rahmani Imad',
-  teacher_job: 'Software and Game developper',
-  teacher_description: '10 years of experience in the Tech industry and game development',
-  teacher_image: './images/imad.png',
-},
-{
-  teacher_name: 'Saidi Ikram',
-  teacher_job: 'Software engineer',
-  teacher_description: '10 years of experience in the Tech industry and web development',
-  teacher_image: './images/ikram.png',
-},
-{
-  teacher_name: 'Mansouri Brahim',
-  teacher_job: '3D artist and UX designer ',
-  teacher_description: '10 years of experience in the Tech industry and web development',
-  teacher_image: './images/brahim.png',
-},
+const teamsDetails = [{
+    team_name: 'Rahmani Imad',
+    team_job: 'Software and Game developper',
+    team_description: '3 years of experience in the Tech industry and game development',
+    team_image: './images/imad.png',
+  },
+  {
+    team_name: 'Saidi Ikram',
+    team_job: 'Software engineer',
+    team_description: '2 years of experience in the Tech industry and web development',
+    team_image: './images/ikram.png',
+  },
+  {
+    team_name: 'Mansouri Brahim',
+    team_job: '3D artist and UX designer ',
+    team_description: '2 years of experience in the Tech industry and web development',
+    team_image: './images/brahim.png',
+  },
 
-{
-  teacher_name: 'Terbeche Mostefa',
-  teacher_job: 'Web Developper and 2D artist',
-  teacher_description: '10 years of experience in the Tech industry and web development',
-  teacher_image: './images/mustapha.png',
-},
+  {
+    team_name: 'Terbeche Mostefa',
+    team_job: 'Web Developper and 2D artist',
+    team_description: '2 years of experience in the Tech industry and web development',
+    team_image: './images/mustapha.png',
+  },
 ];
 
-const teachers = document.getElementById('teachers');
+const teams = document.getElementById('teams');
 
-const teachersTitle = document.createElement('h2');
-teachersTitle.id = 'teachers-title';
-teachersTitle.textContent = 'Our team';
-teachers.appendChild(teachersTitle);
+const teamsTitle = document.createElement('h2');
+teamsTitle.id = 'teams-title';
+teamsTitle.textContent = 'Our team';
+teams.appendChild(teamsTitle);
 
 const mainHr = document.createElement('hr');
 mainHr.classList.add('main-hr');
-teachers.appendChild(mainHr);
+teams.appendChild(mainHr);
 
-const theTeachers = document.createElement('div');
-theTeachers.classList.add('the-teachers');
+const theteams = document.createElement('div');
+theteams.classList.add('the-teams');
 
-for (let i = 0; i < teachersDetails.length; i += 1) {
-  const teacher = document.createElement('div');
-  teacher.classList.add('teacher');
+for (let i = 0; i < teamsDetails.length; i += 1) {
+  const team = document.createElement('div');
+  team.classList.add('team');
   if (i > 1) {
-    teacher.classList.add('teacher-hidded');
+    team.classList.add('team-hidded');
   }
 
-  const teacherImage = document.createElement('img');
-  teacherImage.classList.add('teacher-image');
-  teacherImage.src = teachersDetails[i].teacher_image;
-  teacherImage.alt = 'bla bla';
-  teacher.appendChild(teacherImage);
+  const teamImage = document.createElement('img');
+  teamImage.classList.add('team-image');
+  teamImage.src = teamsDetails[i].team_image;
+  teamImage.alt = 'bla bla';
+  team.appendChild(teamImage);
 
-  const teacherInformation = document.createElement('div');
-  teacherInformation.classList.add('teacher-information');
+  const teamInformation = document.createElement('div');
+  teamInformation.classList.add('team-information');
 
-  const teacherName = document.createElement('h3');
-  teacherName.classList.add('teacher-name');
-  teacherName.textContent = teachersDetails[i].teacher_name;
-  teacherInformation.appendChild(teacherName);
+  const teamName = document.createElement('h3');
+  teamName.classList.add('team-name');
+  teamName.textContent = teamsDetails[i].team_name;
+  teamInformation.appendChild(teamName);
 
-  const teacherJob = document.createElement('p');
-  teacherJob.classList.add('teacher-job');
-  teacherJob.textContent = teachersDetails[i].teacher_job;
-  teacherInformation.appendChild(teacherJob);
+  const teamJob = document.createElement('p');
+  teamJob.classList.add('team-job');
+  teamJob.textContent = teamsDetails[i].team_job;
+  teamInformation.appendChild(teamJob);
 
-  const teacherDescription = document.createElement('h3');
-  teacherDescription.classList.add('teacher-description');
-  teacherDescription.textContent = teachersDetails[i].teacher_description;
-  teacherInformation.appendChild(teacherDescription);
+  const teamDescription = document.createElement('h3');
+  teamDescription.classList.add('team-description');
+  teamDescription.textContent = teamsDetails[i].team_description;
+  teamInformation.appendChild(teamDescription);
 
-  teacher.appendChild(teacherInformation);
-  theTeachers.appendChild(teacher);
+  team.appendChild(teamInformation);
+  theteams.appendChild(team);
 }
 
 const moreDiv = document.createElement('div');
@@ -114,23 +114,23 @@ arrowSpan.appendChild(arrowIcon);
 
 moreDiv.appendChild(arrowSpan);
 
-theTeachers.appendChild(moreDiv);
+theteams.appendChild(moreDiv);
 
-teachers.appendChild(theTeachers);
+teams.appendChild(theteams);
 
-const teachersHidded = document.getElementsByClassName('teacher-hidded');
+const teamsHidded = document.getElementsByClassName('team-hidded');
 
-function teachersToggle() {
+function teamsToggle() {
   if (moreSpan.textContent === 'MORE') {
-    Array.from(teachersHidded).forEach((teacherHidded) => {
-      teacherHidded.style.display = 'flex';
+    Array.from(teamsHidded).forEach((teamHidded) => {
+      teamHidded.style.display = 'flex';
     });
     moreSpan.textContent = 'LESS';
     arrowIcon.classList.remove('fa-chevron-down');
     arrowIcon.classList.add('fa-chevron-up');
   } else if (moreSpan.textContent === 'LESS') {
-    Array.from(teachersHidded).forEach((teacherHidded) => {
-      teacherHidded.style.display = 'none';
+    Array.from(teamsHidded).forEach((teamHidded) => {
+      teamHidded.style.display = 'none';
     });
     moreSpan.textContent = 'MORE';
     arrowIcon.classList.remove('fa-chevron-up');
@@ -140,4 +140,95 @@ function teachersToggle() {
   window.scrollTo(0, document.body.scrollHeight);
 }
 
-moreDiv.addEventListener('click', teachersToggle);
+moreDiv.addEventListener('click', teamsToggle);
+
+
+
+
+
+let rating = JSON.parse(localStorage.getItem('rating')) || [];
+
+
+
+const star1 = document.getElementById("star1");
+const star2 = document.getElementById("star2");
+const star3 = document.getElementById("star3");
+const star4 = document.getElementById("star4");
+const star5 = document.getElementById("star5");
+const finalRating = document.getElementById("final-rating");
+const reviewsNumber = document.getElementById("reviews-number");
+
+
+function addRating(newRate) {
+  rating.push({
+    newRate,
+  });
+  localStorage.setItem('rating', JSON.stringify(rating));
+  return {
+    newRate,
+
+  };
+}
+
+
+
+reviewsNumber.innerHTML = rating.length;
+finalRating.innerHTML = totalRating / rating.length;
+
+
+var totalRating = 0;
+star1.addEventListener('click', (event) => {
+  event.preventDefault();
+  const newTask = addRating(1);
+  reviewsNumber.innerHTML = rating.length;
+
+  for (var i = 0; i < rating.length; i++) {
+    totalRating += rating[i].newRate;
+  }
+  finalRating.innerHTML = totalRating / rating.length;
+
+});
+
+star2.addEventListener('click', (event) => {
+  event.preventDefault();
+  const newTask = addRating(2);
+  reviewsNumber.innerHTML = rating.length;
+  for (var i = 0; i < rating.length; i++) {
+    totalRating += rating[i].newRate;
+  }
+  finalRating.innerHTML = totalRating / rating.length;
+
+
+});
+star3.addEventListener('click', (event) => {
+  event.preventDefault();
+  const newTask = addRating(3);
+  reviewsNumber.innerHTML = rating.length;
+  for (var i = 0; i < rating.length; i++) {
+    totalRating += rating[i].newRate;
+  }
+  finalRating.innerHTML = totalRating / rating.length;
+
+
+});
+star4.addEventListener('click', (event) => {
+  event.preventDefault();
+  const newTask = addRating(4);
+  reviewsNumber.innerHTML = rating.length;
+  for (var i = 0; i < rating.length; i++) {
+    totalRating += rating[i].newRate;
+  }
+
+  finalRating.innerHTML = totalRating / rating.length;
+
+});
+star5.addEventListener('click', (event) => {
+  event.preventDefault();
+  const newTask = addRating(5);
+  reviewsNumber.innerHTML = rating.length;
+  for (var i = 0; i < rating.length; i++) {
+    totalRating += rating[i].newRate;
+  }
+  finalRating.innerHTML = totalRating / rating.length;
+
+});
