@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robots Arena</title>
+  <script src="https://kit.fontawesome.com/287a5ee324.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/desktop.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div id="overlay">
+      <img id="close-button" src="./images/icons/close-icon.svg" alt="close button">
+      <a class="menu-link" href="index.html">Home</a>
+      <a class="menu-link" href="about.html">About</a>
+      <a class="menu-link" href="contact.html">Contact</a>
+    </div>
+
+    <nav class="nav-bar">
+      <ul id="desktop-bar" class="hide-me-on-mobile">
+        <li class="logo"><a href="index.html"><img class="logo-image" src="./images/logo.png" alt=""></a> </li>
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="about.html">About</a> </li>
+        <li><a href="contact.html">Contact</a> </li>
+      </ul>
+      <a href="#"> <img id="navigation" class="hide-me-on-desktop" src="./images/icons/mobile-menu.svg" alt=""></a>
+    </nav>
+
+  </header>
+  <main>
+
+    <div class="contact" id="contact-link">
+
+      <div class="contact-description">
+        <p>We are always interested in receiving feedbacks from you about our game, so if you'd like to chat please get in touch.</p>
+
+      </div>
+
+      <div class="contact-form">
+
+        <form action="https://formspree.io/f/mzbokdyd" method="post" id="form">
+          <fieldset>
+            <input type="text" id="name" placeholder="Full Name" maxlength="30" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea name="message" id="message" cols="30" rows="4" maxlength="500" required>Enter Your Feedback Here</textarea>
+          </fieldset>
+
+          <button id="contact-button" class="resume-button project-button" type="submit" name="button">Get in touch</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="./js/script.js" defer></script>
+</body>
+
+</html>
