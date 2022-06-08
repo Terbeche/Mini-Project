@@ -170,8 +170,9 @@ function addRating(newRate) {
   };
 }
 
-
-
+function myFunction() {
+  finalRating.innerHTML = totalRating / rating.length;
+}
 reviewsNumber.innerHTML = rating.length;
 finalRating.innerHTML = totalRating / rating.length;
 
@@ -181,11 +182,13 @@ star1.addEventListener('click', (event) => {
   event.preventDefault();
   const newTask = addRating(1);
   reviewsNumber.innerHTML = rating.length;
+  totalRating = 0;
 
   for (var i = 0; i < rating.length; i++) {
     totalRating += rating[i].newRate;
   }
-  finalRating.innerHTML = totalRating / rating.length;
+  console.log(totalRating);
+  finalRating.innerHTML = (totalRating / rating.length).toFixed(2);;
 
 });
 
@@ -193,10 +196,11 @@ star2.addEventListener('click', (event) => {
   event.preventDefault();
   const newTask = addRating(2);
   reviewsNumber.innerHTML = rating.length;
+  totalRating = 0;
   for (var i = 0; i < rating.length; i++) {
     totalRating += rating[i].newRate;
   }
-  finalRating.innerHTML = totalRating / rating.length;
+  finalRating.innerHTML = (totalRating / rating.length).toFixed(2);;
 
 
 });
@@ -204,10 +208,11 @@ star3.addEventListener('click', (event) => {
   event.preventDefault();
   const newTask = addRating(3);
   reviewsNumber.innerHTML = rating.length;
+  totalRating = 0;
   for (var i = 0; i < rating.length; i++) {
     totalRating += rating[i].newRate;
   }
-  finalRating.innerHTML = totalRating / rating.length;
+  finalRating.innerHTML = (totalRating / rating.length).toFixed(2);;
 
 
 });
@@ -215,20 +220,22 @@ star4.addEventListener('click', (event) => {
   event.preventDefault();
   const newTask = addRating(4);
   reviewsNumber.innerHTML = rating.length;
+  totalRating = 0;
   for (var i = 0; i < rating.length; i++) {
     totalRating += rating[i].newRate;
   }
 
-  finalRating.innerHTML = totalRating / rating.length;
+  finalRating.innerHTML = (totalRating / rating.length).toFixed(2);;
 
 });
 star5.addEventListener('click', (event) => {
   event.preventDefault();
   const newTask = addRating(5);
   reviewsNumber.innerHTML = rating.length;
+  totalRating = 0;
   for (var i = 0; i < rating.length; i++) {
     totalRating += rating[i].newRate;
   }
-  finalRating.innerHTML = totalRating / rating.length;
+  finalRating.innerHTML = (totalRating / rating.length).toFixed(2);;
 
 });

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/desktop.css">
 </head>
 
-<body>
+<body onload = "myFunction()">
   <header class="header">
     <div id="overlay">
       <img id="close-button" src="./images/icons/close-icon.svg" alt="close button">
@@ -48,7 +48,7 @@
       <img id="star4" class="star" src="./images/star4.svg" alt="">
       <img id="star5" class="star" src="./images/star5.svg" alt="">
       <label id="final-rating" class="star" for=""></label>
-      <label id="reviews-number" class="star" for=""></label><span>Reviews</span>
+      <label id="reviews-number"  class="star reviews" for=""></label><span class="reviews">Reviews</span>
 
     </div>
 
@@ -56,7 +56,7 @@
     <section id="main-program">
 
       <div class="join-button">
-        <button id="join-button" type="button" name="button">Download The Game !</button>
+        <button id="join-button" type="button" name="button"><a href="https://itch.io/">Download The Game !</a></button>
 
       </div>
 
